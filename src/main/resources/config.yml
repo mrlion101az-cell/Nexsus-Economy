@@ -1,0 +1,205 @@
+# NexusEconomy configuration
+
+economy:
+  # balance a brand-new player starts with
+  starting-balance: 0.0
+  # decimal places shown/kept -- Vault plugins query this via fractionalDigits()
+  fractional-digits: 2
+  currency-singular: "Dollar"
+  currency-plural: "Dollars"
+
+# Physical cash: withdraw part of your bank balance as real, tradeable items in
+# these denominations, and deposit them back later. Amounts are broken down
+# greedily from largest to smallest denomination.
+cash:
+  denominations: [100, 50, 20, 10, 5, 1]
+
+shop:
+  # multiplies every price in shop-items.yml -- lets you retune the whole
+  # shop up or down at once without hand-editing every entry. 1.0 = no change.
+  sell-price-multiplier: 1.0
+  buy-price-multiplier: 1.0
+
+  # Automatically adds every remaining placeable block in the game to the
+  # tab named below, on top of whatever's hand-listed in shop-items.yml.
+  # A block already listed by hand anywhere in shop-items.yml is skipped
+  # here, so curated categories (Ores, Decoration, etc.) keep their own
+  # tuned prices and nothing gets listed twice.
+  auto-blocks:
+    enabled: true
+    category-name: "Blocks"
+    # price for any auto-added block that isn't in price-overrides below
+    default-buy: 2.00
+    default-sell: 1.00
+
+    # Blocks withheld from the auto-catalog entirely. Respawn anchors and
+    # TNT are here because they're explosive/griefing tools. The rest are
+    # creative-mode/admin-only blocks (command execution, world-editing,
+    # or invisible/unbreakable blocks) that would be a much bigger "ruin
+    # the server" risk than TNT if handed to every player -- remove any
+    # of these you're comfortable selling, or add more.
+    excluded:
+      - RESPAWN_ANCHOR
+      - TNT
+      - COMMAND_BLOCK
+      - CHAIN_COMMAND_BLOCK
+      - REPEATING_COMMAND_BLOCK
+      - STRUCTURE_BLOCK
+      - STRUCTURE_VOID
+      - JIGSAW
+      - BARRIER
+      - LIGHT
+      - SPAWNER
+      - BEDROCK
+
+    # Optional per-block price overrides for anything you want priced above
+    # the flat default -- everything not listed here just uses default-buy
+    # / default-sell above. A small starter set of "storage block" tiers is
+    # included; add, remove, or reprice freely.
+    price-overrides:
+      COAL_BLOCK: { buy: 20.00, sell: 10.00 }
+      IRON_BLOCK: { buy: 54.00, sell: 27.00 }
+      GOLD_BLOCK: { buy: 180.00, sell: 90.00 }
+      REDSTONE_BLOCK: { buy: 54.00, sell: 27.00 }
+      LAPIS_BLOCK: { buy: 54.00, sell: 27.00 }
+      DIAMOND_BLOCK: { buy: 540.00, sell: 270.00 }
+      EMERALD_BLOCK: { buy: 540.00, sell: 270.00 }
+      NETHERITE_BLOCK: { buy: 2250.00, sell: 900.00 }
+      RAW_IRON_BLOCK: { buy: 54.00, sell: 27.00 }
+      RAW_GOLD_BLOCK: { buy: 180.00, sell: 90.00 }
+      RAW_COPPER_BLOCK: { buy: 18.00, sell: 9.00 }
+      COPPER_BLOCK: { buy: 6.00, sell: 3.00 }
+      SPONGE: { buy: 60.00, sell: 30.00 }
+      WET_SPONGE: { buy: 20.00, sell: 10.00 }
+      SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      # every dyed shulker box color, priced the same as the plain one --
+      # portable 27-slot storage is worth far more than a flat block price
+      WHITE_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      ORANGE_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      MAGENTA_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      LIGHT_BLUE_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      YELLOW_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      LIME_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      PINK_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      GRAY_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      LIGHT_GRAY_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      CYAN_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      PURPLE_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      BLUE_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      BROWN_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      GREEN_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      RED_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+      BLACK_SHULKER_BOX: { buy: 250.00, sell: 100.00 }
+
+auction:
+  # server-generated auctions on top of whatever players list themselves
+  auto-enabled: true
+  # how often (minutes) a new automatic server auction appears
+  auto-interval-minutes: 30
+  # how long (minutes) each auction runs once listed, both server and player
+  duration-minutes: 60
+  # pool the server picks randomly from for its own auctions -- fully yours
+  # to edit; add/remove/reprice entries freely
+  pool:
+    - material: DIAMOND
+      amount: 1
+      start-price: 15.0
+    - material: EMERALD
+      amount: 4
+      start-price: 20.0
+    - material: NETHERITE_INGOT
+      amount: 1
+      start-price: 120.0
+    - material: GOLDEN_APPLE
+      amount: 2
+      start-price: 15.0
+    - material: ENDER_PEARL
+      amount: 8
+      start-price: 12.0
+
+credit:
+  # a new player's starting credit line and score
+  starting-limit: 500.0
+  starting-score: 650
+  min-score: 300
+  max-score: 850
+  # applied to whatever's left unpaid at the end of each billing cycle
+  monthly-interest-rate: 0.02
+  # minimum payment due each cycle: the larger of (balance * percent) and the floor
+  minimum-payment-percent: 0.03
+  minimum-payment-floor: 10.0
+  # charged on top of the balance if last cycle's minimum wasn't paid
+  late-fee: 25.0
+  score-penalty-per-missed-payment: 30
+  score-bonus-per-ontime-payment: 5
+  # consecutive missed cycles before the account freezes (charging blocked until paid down)
+  freeze-after-missed-payments: 3
+  # billing is driven directly by NexusSeasons' day counter when it's installed --
+  # the instant the day rolls from its max (30 by default) back to 1, that's a new
+  # month and a billing cycle runs. If NexusSeasons isn't installed, this real-time
+  # interval is used instead so credit still works standalone.
+  fallback-billing-interval-hours: 168
+
+bank:
+  # savings interest, paid on the SAME billing cycle as credit (one season
+  # change, or the real-time fallback if NexusSeasons isn't installed)
+  interest-enabled: true
+  interest-rate: 0.01
+  # balances below this don't earn interest -- avoids meaningless fraction-of-a-cent payouts
+  interest-minimum-balance: 1.0
+  # preset one-click withdraw amounts shown in the /bank GUI -- /bank withdraw <amount>
+  # still works for any exact whole-dollar amount not listed here
+  withdraw-presets: [10, 50, 100, 500, 1000]
+
+stocks:
+  enabled: true
+  # how often prices move
+  tick-interval-minutes: 5
+  # default per-tick random-walk range (+/-) for any stock that doesn't set its own
+  default-volatility: 0.03
+  # rare chance EVERY tick check of a market-wide event instead of normal movement
+  event-chance: 0.05
+  crash-min-percent: 10
+  crash-max-percent: 30
+  boom-min-percent: 10
+  boom-max-percent: 30
+
+  # the roster -- add/remove/reprice freely, this is a starter set tying into
+  # the rest of the server's own lore/economy
+  roster:
+    nexind:
+      company-name: "NexusIndustries Corp"
+      starting-price: 100.0
+      volatility: 0.02
+      min-price: 20.0
+      max-price: 500.0
+    safehaven:
+      company-name: "SafeHaven Trust"
+      starting-price: 50.0
+      volatility: 0.01
+      min-price: 20.0
+      max-price: 100.0
+    voltex:
+      company-name: "Voltex Energy"
+      starting-price: 45.0
+      volatility: 0.04
+      min-price: 5.0
+      max-price: 200.0
+    cryptidco:
+      company-name: "CryptidCo Expeditions"
+      starting-price: 30.0
+      volatility: 0.08
+      min-price: 2.0
+      max-price: 300.0
+    blackmarket_h:
+      company-name: "Black Market Holdings"
+      starting-price: 20.0
+      volatility: 0.12
+      min-price: 1.0
+      max-price: 400.0
+    frontier:
+      company-name: "Frontier Mining Co"
+      starting-price: 60.0
+      volatility: 0.05
+      min-price: 10.0
+      max-price: 250.0
