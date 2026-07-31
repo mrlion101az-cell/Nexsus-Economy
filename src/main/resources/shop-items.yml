@@ -1,0 +1,565 @@
+# NexusEconomy polished catalog v4
+# Every curated item retains its existing exact buy/sell price.
+# Dedicated category shells are intentionally present even when empty: the automatic
+# catalog merges the remaining Minecraft blocks into them while preserving this order.
+# Prices support cents. Auto-added items receive stable per-material effort modifiers,
+# while any entry below can still be pinned with exact buy/sell values.
+
+catalog-version: 4
+categories:
+  Top Up:
+    display-name: Top Up
+    icon: EMERALD
+    items:
+    - material: BREAD
+      buy: 75.0
+      sell: 14.0
+    - material: COOKED_BEEF
+      buy: 120.0
+      sell: 22.0
+    - material: STONE
+      buy: 95.0
+      sell: 18.0
+    - material: COBBLESTONE
+      buy: 75.0
+      sell: 14.0
+    - material: DIRT
+      buy: 55.0
+      sell: 10.0
+    - material: OAK_LOG
+      buy: 150.0
+      sell: 26.0
+    - material: GLASS
+      buy: 400.0
+      sell: 65.0
+    - material: COAL
+      buy: 125.0
+      sell: 24.0
+    - material: IRON_INGOT
+      buy: 560.0
+      sell: 85.0
+    - material: GOLD_INGOT
+      buy: 720.0
+      sell: 110.0
+    - material: DIAMOND
+      buy: 3300.0
+      sell: 450.0
+    - material: REDSTONE
+      buy: 145.0
+      sell: 27.0
+    - material: CRAFTING_TABLE
+      buy: 75.0
+      sell: 14.0
+    - material: FURNACE
+      buy: 95.0
+      sell: 18.0
+    - material: ENDER_CHEST
+      buy: 5200.0
+      sell: 720.0
+    - material: GOLDEN_APPLE
+      buy: 1650.0
+      sell: 230.0
+  Food:
+    display-name: Food
+    icon: COOKED_BEEF
+    items:
+    - material: APPLE
+      buy: 85.0
+      sell: 16.0
+    - material: BREAD
+      buy: 75.0
+      sell: 14.0
+    - material: COOKED_BEEF
+      buy: 120.0
+      sell: 22.0
+    - material: COOKED_CHICKEN
+      buy: 100.0
+      sell: 19.0
+    - material: GOLDEN_APPLE
+      buy: 1650.0
+      sell: 230.0
+  Crops:
+    display-name: Crops
+    icon: WHEAT
+    items:
+    - material: WHEAT
+      buy: 85.0
+      sell: 16.0
+    - material: CARROT
+      buy: 85.0
+      sell: 16.0
+    - material: POTATO
+      buy: 85.0
+      sell: 16.0
+    - material: BEETROOT
+      buy: 75.0
+      sell: 14.0
+    - material: MELON
+      buy: 95.0
+      sell: 18.0
+    - material: PUMPKIN
+      buy: 110.0
+      sell: 20.0
+    - material: NETHER_WART
+      buy: 170.0
+      sell: 30.0
+  Tree Products:
+    display-name: Tree Products
+    icon: OAK_SAPLING
+    items: []
+  Flowers:
+    display-name: Flowers
+    icon: POPPY
+    items: []
+  Plants:
+    display-name: Plants
+    icon: FERN
+    items: []
+  Mushrooms:
+    display-name: Mushrooms
+    icon: RED_MUSHROOM
+    items: []
+  Glass:
+    display-name: Glass
+    icon: GLASS
+    items:
+    - material: GLASS
+      buy: 400.0
+      sell: 65.0
+  Carpets:
+    display-name: Carpets
+    icon: RED_CARPET
+    items: []
+  Wool:
+    display-name: Wool
+    icon: WHITE_WOOL
+    items: []
+  Concrete:
+    display-name: Concrete
+    icon: WHITE_CONCRETE
+    items: []
+  Concrete Powder:
+    display-name: Concrete Powder
+    icon: WHITE_CONCRETE_POWDER
+    items: []
+  Terracotta:
+    display-name: Terracotta
+    icon: TERRACOTTA
+    items: []
+  Glazed Terracotta:
+    display-name: Glazed Terracotta
+    icon: WHITE_GLAZED_TERRACOTTA
+    items: []
+  Wood:
+    display-name: Wood
+    icon: OAK_PLANKS
+    items:
+    - material: OAK_LOG
+      buy: 150.0
+      sell: 26.0
+  Doors & Trapdoors:
+    display-name: Doors & Trapdoors
+    icon: OAK_DOOR
+    items: []
+  Fences & Walls:
+    display-name: Fences & Walls
+    icon: OAK_FENCE
+    items: []
+  Stone:
+    display-name: Stone
+    icon: STONE_BRICKS
+    items:
+    - material: STONE
+      buy: 95.0
+      sell: 18.0
+    - material: COBBLESTONE
+      buy: 75.0
+      sell: 14.0
+    - material: OBSIDIAN
+      buy: 6800.0
+      sell: 900.0
+  Bricks & Masonry:
+    display-name: Bricks & Masonry
+    icon: BRICKS
+    items: []
+  Terrain:
+    display-name: Terrain
+    icon: GRASS_BLOCK
+    items:
+    - material: DIRT
+      buy: 55.0
+      sell: 10.0
+  Ores & Minerals:
+    display-name: Ores & Minerals
+    icon: DIAMOND_ORE
+    items:
+    - material: COAL
+      buy: 125.0
+      sell: 24.0
+    - material: LAPIS_LAZULI
+      buy: 155.0
+      sell: 29.0
+    - material: IRON_INGOT
+      buy: 560.0
+      sell: 85.0
+    - material: GOLD_INGOT
+      buy: 720.0
+      sell: 110.0
+    - material: DIAMOND
+      buy: 3300.0
+      sell: 450.0
+    - material: EMERALD
+      buy: 3600.0
+      sell: 500.0
+    - material: ANCIENT_DEBRIS
+      buy: 2800.0
+      sell: 320.0
+    - material: NETHERITE_INGOT
+      buy: 4200.0
+      sell: 480.0
+    - material: COAL_BLOCK
+      buy: 1550.0
+      sell: 248.0
+    - material: REDSTONE_BLOCK
+      buy: 1750.0
+      sell: 280.0
+    - material: LAPIS_BLOCK
+      buy: 1900.0
+      sell: 300.0
+    - material: IRON_BLOCK
+      buy: 6200.0
+      sell: 880.0
+    - material: GOLD_BLOCK
+      buy: 8300.0
+      sell: 1140.0
+    - material: DIAMOND_BLOCK
+      buy: 38000.0
+      sell: 4650.0
+    - material: EMERALD_BLOCK
+      buy: 42000.0
+      sell: 5150.0
+    - material: NETHERITE_BLOCK
+      buy: 44000.0
+      sell: 6000.00
+  Redstone:
+    display-name: Redstone
+    icon: REDSTONE
+    items:
+    - material: REDSTONE
+      buy: 145.0
+      sell: 1027.00
+    - material: REDSTONE_TORCH
+      buy: 85.0
+      sell: 1016.00
+    - material: REPEATER
+      buy: 110.0
+      sell: 1020.00
+    - material: COMPARATOR
+      buy: 140.0
+      sell: 1026.00
+    - material: PISTON
+      buy: 320.0
+      sell: 1055.00
+    - material: HOPPER
+      buy: 1350.0
+      sell: 1200.00
+    - material: OBSERVER
+      buy: 1200.0
+      sell: 1185.00
+  Lighting:
+    display-name: Lighting
+    icon: LANTERN
+    items:
+    - material: CANDLE
+      buy: 85.0
+      sell: 1016.00
+    - material: LANTERN
+      buy: 110.0
+      sell: 1020.00
+    - material: GLOWSTONE
+      buy: 130.0
+      sell: 1024.00
+    - material: SEA_LANTERN
+      buy: 630.0
+      sell: 1100.00
+  Storage:
+    display-name: Storage
+    icon: CHEST
+    items:
+    - material: ENDER_CHEST
+      buy: 5200.0
+      sell: 1720.00
+  Workstations:
+    display-name: Workstations
+    icon: CRAFTING_TABLE
+    items:
+    - material: CRAFTING_TABLE
+      buy: 75.0
+      sell: 1014.00
+    - material: FURNACE
+      buy: 95.0
+      sell: 1018.00
+    - material: SMITHING_TABLE
+      buy: 120.0
+      sell: 1022.00
+    - material: ENCHANTING_TABLE
+      buy: 7200.0
+      sell: 1980.00
+    - material: ANVIL
+      buy: 1500.0
+      sell: 1220.00
+  Decoration:
+    display-name: Decoration
+    icon: PAINTING
+    items:
+    - material: BOOKSHELF
+      buy: 1700.0
+      sell: 1240.00
+  Nether:
+    display-name: Nether
+    icon: NETHERRACK
+    items: []
+  End:
+    display-name: End
+    icon: END_STONE
+    items: []
+  Mob Drops:
+    display-name: Mob Drops
+    icon: ROTTEN_FLESH
+    items:
+    - material: BONE
+      buy: 85.0
+      sell: 1016.00
+    - material: STRING
+      buy: 85.0
+      sell: 1016.00
+    - material: GUNPOWDER
+      buy: 130.0
+      sell: 1024.00
+    - material: ENDER_PEARL
+      buy: 370.0
+      sell: 1060.00
+    - material: BLAZE_ROD
+      buy: 460.0
+      sell: 1075.00
+    - material: GHAST_TEAR
+      buy: 1750.0
+      sell: 1270.00
+    - material: NETHER_STAR
+      buy: 150000.0
+      sell: -1
+  Armor:
+    display-name: Armor
+    icon: DIAMOND_CHESTPLATE
+    items:
+    - material: LEATHER_HELMET
+      buy: 110.0
+      sell: 1020.00
+    - material: LEATHER_CHESTPLATE
+      buy: 140.0
+      sell: 1026.00
+    - material: LEATHER_LEGGINGS
+      buy: 140.0
+      sell: 1026.00
+    - material: LEATHER_BOOTS
+      buy: 110.0
+      sell: 1020.00
+    - material: IRON_HELMET
+      buy: 430.0
+      sell: 1065.00
+    - material: IRON_CHESTPLATE
+      buy: 620.0
+      sell: 1095.00
+    - material: IRON_LEGGINGS
+      buy: 620.0
+      sell: 1095.00
+    - material: IRON_BOOTS
+      buy: 430.0
+      sell: 1065.00
+    - material: CHAINMAIL_HELMET
+      buy: 980.0
+      sell: 1140.00
+    - material: CHAINMAIL_CHESTPLATE
+      buy: 1300.0
+      sell: 1190.00
+    - material: CHAINMAIL_LEGGINGS
+      buy: 1300.0
+      sell: 1190.00
+    - material: CHAINMAIL_BOOTS
+      buy: 980.0
+      sell: 1140.00
+    - material: GOLDEN_HELMET
+      buy: 170.0
+      sell: 1028.00
+    - material: GOLDEN_CHESTPLATE
+      buy: 240.0
+      sell: 1040.00
+    - material: GOLDEN_LEGGINGS
+      buy: 240.0
+      sell: 1040.00
+    - material: GOLDEN_BOOTS
+      buy: 170.0
+      sell: 1028.00
+    - material: DIAMOND_HELMET
+      buy: 4400.0
+      sell: 1600.00
+    - material: DIAMOND_CHESTPLATE
+      buy: 6200.0
+      sell: 1850.00
+    - material: DIAMOND_LEGGINGS
+      buy: 6200.0
+      sell: 1850.00
+    - material: DIAMOND_BOOTS
+      buy: 4400.0
+      sell: 1600.00
+    - material: NETHERITE_HELMET
+      buy: 17000.0
+      sell: 3200.00
+    - material: NETHERITE_CHESTPLATE
+      buy: 22000.0
+      sell: 3900.00
+    - material: NETHERITE_LEGGINGS
+      buy: 22000.0
+      sell: 3900.00
+    - material: NETHERITE_BOOTS
+      buy: 17000.0
+      sell: 3200.00
+  Tools:
+    display-name: Tools
+    icon: DIAMOND_PICKAXE
+    items:
+    - material: WOODEN_PICKAXE
+      buy: 95.0
+      sell: 1018.00
+    - material: WOODEN_AXE
+      buy: 95.0
+      sell: 1018.00
+    - material: WOODEN_SHOVEL
+      buy: 95.0
+      sell: 1018.00
+    - material: WOODEN_HOE
+      buy: 95.0
+      sell: 1018.00
+    - material: STONE_PICKAXE
+      buy: 130.0
+      sell: 1024.00
+    - material: STONE_AXE
+      buy: 130.0
+      sell: 1024.00
+    - material: STONE_SHOVEL
+      buy: 130.0
+      sell: 1024.00
+    - material: STONE_HOE
+      buy: 130.0
+      sell: 1024.00
+    - material: IRON_PICKAXE
+      buy: 460.0
+      sell: 1070.00
+    - material: IRON_AXE
+      buy: 460.0
+      sell: 1070.00
+    - material: IRON_SHOVEL
+      buy: 460.0
+      sell: 1070.00
+    - material: IRON_HOE
+      buy: 460.0
+      sell: 1070.00
+    - material: GOLDEN_PICKAXE
+      buy: 190.0
+      sell: 1032.00
+    - material: GOLDEN_AXE
+      buy: 190.0
+      sell: 1032.00
+    - material: GOLDEN_SHOVEL
+      buy: 190.0
+      sell: 1032.00
+    - material: GOLDEN_HOE
+      buy: 190.0
+      sell: 1032.00
+    - material: DIAMOND_PICKAXE
+      buy: 4800.0
+      sell: 1650.00
+    - material: DIAMOND_AXE
+      buy: 4800.0
+      sell: 1650.00
+    - material: DIAMOND_SHOVEL
+      buy: 4800.0
+      sell: 1650.00
+    - material: DIAMOND_HOE
+      buy: 4800.0
+      sell: 1650.00
+    - material: NETHERITE_PICKAXE
+      buy: 18500.0
+      sell: 3400.00
+    - material: NETHERITE_AXE
+      buy: 18500.0
+      sell: 3400.00
+    - material: NETHERITE_SHOVEL
+      buy: 18500.0
+      sell: 3400.00
+    - material: NETHERITE_HOE
+      buy: 18500.0
+      sell: 3400.00
+  Weapons:
+    display-name: Weapons
+    icon: DIAMOND_SWORD
+    items:
+    - material: WOODEN_SWORD
+      buy: 95.0
+      sell: 1018.00
+    - material: STONE_SWORD
+      buy: 130.0
+      sell: 1024.00
+    - material: IRON_SWORD
+      buy: 460.0
+      sell: 1070.00
+    - material: GOLDEN_SWORD
+      buy: 190.0
+      sell: 1032.00
+    - material: DIAMOND_SWORD
+      buy: 4800.0
+      sell: 1650.00
+    - material: NETHERITE_SWORD
+      buy: 18500.0
+      sell: 3400.00
+  Ranged:
+    display-name: Ranged
+    icon: BOW
+    items:
+    - material: BOW
+      buy: 220.0
+      sell: 1038.00
+    - material: CROSSBOW
+      buy: 620.0
+      sell: 1095.00
+    - material: TRIDENT
+      buy: 21000.0
+      sell: 3800.00
+  Brewing:
+    display-name: Brewing
+    icon: BREWING_STAND
+    items: []
+  Fishing:
+    display-name: Fishing
+    icon: FISHING_ROD
+    items: []
+  Utility:
+    display-name: Utility
+    icon: BUCKET
+    items:
+    - material: BOOK
+      buy: 80.0
+      sell: 1015.00
+    - material: PAPER
+      buy: 65.0
+      sell: 1012.00
+    - material: BEACON
+      buy: 100000.0
+      sell: -1
+  Miscellaneous:
+    display-name: Miscellaneous
+    icon: CHEST
+    items:
+    - material: SHIELD
+      buy: 200.0
+      sell: 1034.00
