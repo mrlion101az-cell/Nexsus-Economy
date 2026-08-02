@@ -1,0 +1,41 @@
+name: NexusEconomy
+version: ${project.version}
+main: com.nexusuniverse.economy.NexusEconomyPlugin
+api-version: '1.21'
+author: Nexus Universe
+description: Bank (Vault-compatible economy provider), physical cash withdrawal in real denominations, a category-based shop GUI with custom-items and enchantments tabs plus quantity-select buy/sell and quick /sell commands, a bounty order board, a dual server/player auction house, a credit account with interest/minimum payments/credit score, and a stock market with real price movement and market-wide crash/boom events.
+softdepend: [Vault, NexusSeasons]
+
+commands:
+  bank:
+    description: Check your balance, pay other players, or manage cash.
+    usage: /bank <balance|pay <player> <amount>|withdraw <amount>|deposit>
+  shop:
+    description: Open the item shop.
+    usage: /shop
+  sell:
+    description: Quickly sell what's in your hand, or everything sellable in your inventory.
+    usage: /sell <hand|all>
+  economyadmin:
+    description: Admin balance management.
+    aliases: [ecoadmin]
+    usage: /economyadmin <set|add|remove> <player> <amount>
+    permission: nexuseconomy.admin
+  orders:
+    description: Post bounty orders for items, or fulfill someone else's.
+    usage: /orders <list|create <material> <qty> <pay-per-item>|fulfill <id>|cancel <id>>
+  auction:
+    description: The auction house -- browse, list your own items, bid, and claim winnings.
+    aliases: [ah]
+    usage: /auction <list|sell <price> <minutes>|bid <id> <amount>|claim>
+  credit:
+    description: Your credit account -- check your statement, take a cash advance, make a payment, pay a NexusBudget bill directly, or get a physical card.
+    usage: /credit <status|charge <amount>|pay <amount>|payoff|paybill <billId> [amount]|give [player]>
+  stocks:
+    description: The stock market -- prices move on their own, buy/sell against your bank balance.
+    usage: /stocks <list|price <symbol>|buy <symbol> <shares>|sell <symbol> <shares>|portfolio>
+
+permissions:
+  nexuseconomy.admin:
+    description: Manage player balances directly.
+    default: op
